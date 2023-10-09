@@ -84,7 +84,7 @@ export const getCurrentHumidity = (weatherData) => {
 	const relativeHumidity = weatherData?.hourly?.relativehumidity_2m;
 
 	// Find the index of the current hour in the hourly time array
-	const currentIndex = hourlyTime.findIndex((hour) => {
+	const currentIndex = hourlyTime?.findIndex((hour) => {
 		const hourNumber = parseInt(hour.substring(11, 13), 10); // Extract the hour part
 		return hourNumber === currentHour;
 	});
