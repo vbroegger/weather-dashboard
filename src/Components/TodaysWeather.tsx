@@ -42,12 +42,12 @@ const TodaysWeather: FC<Props> = ({ weather }) => {
 		}
 	]
 
-	const index: number = weather.current_weather.weathercode;
+	const index: number = weather?.current_weather?.weathercode;
 	const weatherDescription = weatherDescriptions[index];
-	const dayDescription = weatherDescription.day.description;
-	const dayLogo = weatherDescription.day.image;
-	const nightDescription = weatherDescription.night.description;
-	const nightLogo = weatherDescription.night.image;
+	const dayDescription = weatherDescription?.day?.description;
+	const dayLogo = weatherDescription?.day?.image;
+	const nightDescription = weatherDescription?.night?.description;
+	const nightLogo = weatherDescription?.night?.image;
 
 
 	return (
