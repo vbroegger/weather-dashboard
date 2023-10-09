@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import './App.css';
 import Page from './Components/Page';
 import Header from './Components/Header';
@@ -15,10 +15,6 @@ const App: FC<{}> = () => {
 			.then(response => response.json())
 			.then(json => setWeather(json))
 	}, []);
-
-	if (weather) {
-		console.log(weather);
-	}
 
 	return (
 		<div className="bg-gray-100 h-screen">

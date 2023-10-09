@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { WeatherData } from '../Global/global';
 import { Card } from './Card';
 import { weatherDescriptions } from '../Global/weather-descriptions';
@@ -21,9 +21,9 @@ const Forecast: FC<Props> = ({ weather }) => {
 					const date = new Date(time);
 
 					const options = {
-						weekday: 'long', // Display the full day of the week
-						timeZone: 'Europe/Copenhagen', // Set the desired time zone
-						locale: 'da-DK', // Set the locale to Danish (Denmark)
+						weekday: 'long',
+						timeZone: 'Europe/Copenhagen',
+						locale: 'da-DK',
 					} as any;
 
 					return (
