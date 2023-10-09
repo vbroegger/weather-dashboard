@@ -78,13 +78,13 @@ export const getArrowIcon = (angle: number) => {
 
 
 export const getCurrentHumidity = (weatherData) => {
-	const currentWeatherTime = new Date(weatherData?.current_weather?.time);
+	const currentWeatherTime = new Date(weatherData.current_weather.time);
 	const currentHour = currentWeatherTime.getHours();
-	const hourlyTime = weatherData?.hourly?.time;
-	const relativeHumidity = weatherData?.hourly?.relativehumidity_2m;
+	const hourlyTime = weatherData.hourly.time;
+	const relativeHumidity = weatherData.hourly.relativehumidity_2m;
 
 	// Find the index of the current hour in the hourly time array
-	const currentIndex = hourlyTime?.findIndex((hour) => {
+	const currentIndex = hourlyTime.findIndex((hour) => {
 		const hourNumber = parseInt(hour.substring(11, 13), 10); // Extract the hour part
 		return hourNumber === currentHour;
 	});
